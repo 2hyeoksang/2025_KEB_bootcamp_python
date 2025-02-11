@@ -47,11 +47,11 @@ def is_prime(num):
         return False
     return True
 
-# num = int(input("Enter Integer : "))
-# if is_prime(num):
-#     print("Prime")
-# else:
-#     print("Not Prime")
+num = int(input("Enter Integer : "))
+if is_prime(num):
+    print("Prime")
+else:
+    print("Not Prime")
 
 num_arr = input("Enter Two Integers : ").split()
 num1 = int(num_arr[0])
@@ -67,3 +67,10 @@ elif num2 < num1 :
         if is_prime(num2):
             print(num2, end = ' ')
         num2 += 1
+
+# 4) **, pow 함수 쓰지 않고 커스텀 함수를 만들어서..?
+def my_power(num, exp):
+    result = 1
+    for k in range(exp):
+        result *= num
+    return result
