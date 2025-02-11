@@ -1,4 +1,17 @@
-for i in range(2,10):
-    for j in range(2,10):
-        print(f"{i:02d} X {j:02d} = {i*j:02d}", end=' | ')
-    print()
+# univ = 'Inha University'
+# print(univ)
+# print(univ[5])
+# #univ[5] = 'u' # Immutable
+# subjects = ['python','c++','linux','data structures','database']
+# print(subjects)
+# print(subjects[3])
+# subjects[3] = 'data structure & algorithm' # Mutable
+
+print(0.1)
+print(1e-1)
+print(0.01)
+print(1e-2)
+print(314.1592)
+print(0.3141592e3)
+print(21000)
+print(21_000) #가독성을 위해 사용
