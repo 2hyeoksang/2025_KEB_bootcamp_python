@@ -47,10 +47,23 @@ def is_prime(num):
         return False
     return True
 
-num = int(input("Enter Integer : "))
-if is_prime(num):
-    print("Prime")
-else:
-    print("Not Prime")
+# num = int(input("Enter Integer : "))
+# if is_prime(num):
+#     print("Prime")
+# else:
+#     print("Not Prime")
 
+num_arr = input("Enter Two Integers : ").split()
+num1 = int(num_arr[0])
+num2 = int(num_arr[1])
 
+if num1 < num2:
+    while num1 <= num2:
+        if is_prime(num1):
+            print(num1, end = ' ')
+        num1 += 1
+elif num2 < num1 :
+    while num2 <= num1 :
+        if is_prime(num2):
+            print(num2, end = ' ')
+        num2 += 1
