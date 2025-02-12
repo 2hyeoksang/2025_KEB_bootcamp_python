@@ -39,6 +39,7 @@ try:
 except ValueError:
     print('해당과목이 존재하지 않습니다')
 
+import math
 
 def my_pow(b, e) -> float:
     """
