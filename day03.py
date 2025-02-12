@@ -38,3 +38,28 @@ try:
     print(f"해당 과목이 존재합니다. 위치는 {subjects.index(subject)}번 인덱스입니다.")
 except ValueError:
     print('해당과목이 존재하지 않습니다')
+
+
+def my_pow(b, e) -> float:
+    """
+    A user-defined function that receives a base and exponent and returns the power result in the form of a real number
+    :param b: base number
+    :param e: exponent
+    :return: the power result in the form of a real number
+    """
+    if e < 0:
+        b = 1 / b
+        e = e * -1
+
+    result = 1
+
+    i = int(e)
+    f = e - i
+
+    for _ in range(i):  # for k in range(e):
+        result = result * b
+
+    if f > 0:
+        result = result * math.exp(f * math.log(b))
+
+    return result

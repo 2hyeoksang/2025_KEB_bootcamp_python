@@ -69,8 +69,26 @@ elif num2 < num1 :
         num2 += 1
 
 # 4) **, pow 함수 쓰지 않고 커스텀 함수를 만들어서..?
-def my_power(num, exp):
+def my_pow(b, e) -> float:
+    """
+    A user-defined function that receives a base and exponent and returns the power result in the form of a real number
+    :param b: base number
+    :param e: exponent
+    :return: the power result in the form of a real number
+    """
+    if e < 0:
+        b = 1/b
+        e = e * -1
+
     result = 1
-    for k in range(exp):
-        result *= num
+
+    i = int(e)
+    f = e - i
+
+    for _ in range(i):  # for k in range(e):
+        result = result * b
+
+    if f > 0:
+        result = result * math.exp(f * math.log(b))
+
     return result
