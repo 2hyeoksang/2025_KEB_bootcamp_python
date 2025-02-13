@@ -23,8 +23,8 @@ def time_decorator(func):
     return wrapper
 
 
-@description_decorator
-@time_decorator
+# @description_decorator
+# @time_decorator
 def factorial(n):
     """
     calculating the value of factorial of n
@@ -36,6 +36,5 @@ def factorial(n):
 
 
 number=int(input("num : "))
-# f1 = description_decorator(factorial)
-# print(f1(number))
-print(f'{number}! = {factorial(number)}')
+t = description_decorator(time_decorator(factorial))
+print(f'{number}! = {t(number)}')
