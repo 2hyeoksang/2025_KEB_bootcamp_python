@@ -8,8 +8,8 @@ def description_decorator(f):
     def inner(*arg):
         print(f.__name__)
         print(f.__doc__)
-        r = f(*arg)
-        return r
+        # r = f(*arg)
+        # return r
     return inner
 
 
@@ -36,5 +36,6 @@ def factorial(n):
 
 
 number=int(input("num : "))
-t = description_decorator(time_decorator(factorial))
-print(f'{number}! = {t(number)}')
+t = description_decorator(factorial)
+t(number)
+print(f'{number}! = {time_decorator(factorial)(number)}')
